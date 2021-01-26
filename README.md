@@ -15,7 +15,7 @@ package main
 import _ "github.com/cyberlabsai/logger" 
 
 func main() {
-    fmt.Println("Without extension")
+    fmt.Println("Without use extension on package main")
 }
 ```
 
@@ -27,9 +27,25 @@ package main
 import "github.com/cyberlabsai/logger"
 
 func main() {
-    logger.Info("With extension")
+    logger.Info("with extension")
+
+    logger.Error("shit happens!")
 }
+```
 
+Logging with custom fields.
 
+```go
+package main
 
+import "github.com/cyberlabsai/logger"
+
+func main() {
+    // Note that the F is just a easy access to a map.
+    logger.WithFields(log.F{
+		"user_id": 1,
+		"func":    "customMessage",
+		"message": "my custom message",
+	}).Info("When i log with custom fields")
+}
 ```
