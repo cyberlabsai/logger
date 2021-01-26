@@ -2,7 +2,7 @@
 
 # logger
 
-Logger is a Logrus extension to quickly use as a Singleton when it is an advantage to your project.
+Logger is an opinionated wrapper around Logrus that is extremely simple to use. It also has automatic integration with Sentry.
 
 ## How it works
 
@@ -24,12 +24,12 @@ In this second example the main package uses the logger.
 ```go
 package main
 
-import "github.com/cyberlabsai/logger"
+import log "github.com/cyberlabsai/logger"
 
 func main() {
-    logger.Info("with extension")
+    log.Info("with extension")
 
-    logger.Error("shit happens!")
+    log.Error("shit happens!")
 }
 ```
 
@@ -38,11 +38,11 @@ Logging with custom fields.
 ```go
 package main
 
-import "github.com/cyberlabsai/logger"
+import log "github.com/cyberlabsai/logger"
 
 func main() {
     // Note that the F is just a easy access to a map.
-    logger.WithFields(log.F{
+    log.WithFields(log.F{
 		"user_id": 1,
 		"func":    "customMessage",
 		"message": "my custom message",

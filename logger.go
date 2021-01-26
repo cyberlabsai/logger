@@ -25,7 +25,8 @@ func init() {
 			logrus.ErrorLevel,
 		})
 		if err != nil {
-			logger.Warnf("It was not possible to enable Sentry handler: %w", err)
+			logger.Errorf("It was not possible to enable Sentry handler: %w", err)
+			return
 		}
 
 		hook.StacktraceConfiguration.Enable = true
