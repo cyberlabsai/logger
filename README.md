@@ -8,7 +8,7 @@ Logger is a Logrus extension to quickly use as a Singleton when it is an advanta
 
 The logger initializes independently with the function init(), than you can use their functions in any package.
 
-In case of your main package doesn't use the logger, you must import the package with undercore.
+In case of your main package doesn't use the logger, you must import the package with underscore.
 ```go
 package main
 
