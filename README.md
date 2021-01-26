@@ -41,8 +41,7 @@ package main
 import log "github.com/cyberlabsai/logger"
 
 func main() {
-    // Note that the F is just a easy access to a map.
-    log.WithFields(log.F{
+    log.WithFields(log.Fields{
 		"user_id": 1,
 		"func":    "customMessage",
 		"message": "my custom message",

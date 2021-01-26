@@ -9,8 +9,8 @@ import (
 
 var logger *logrus.Logger
 
-// F is a map used to log custom fields.
-type F map[string]interface{}
+// Fields is a map used to log custom fields.
+type Fields map[string]interface{}
 
 //Init initializes the logger to be used in any package.
 func init() {
