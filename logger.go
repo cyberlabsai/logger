@@ -45,7 +45,17 @@ func Info(args ...interface{}) {
 	logger.Info(args...)
 }
 
+// Warning log the args as a warning.
+func Warning(args ...interface{}) {
+	logger.Warning(args...)
+}
+
 // Error log the args as an error.
 func Error(args ...interface{}) {
 	logger.Error(args...)
+}
+
+// Fatal log the args as an error and quit immediately.
+func Fatal(args ...interface{}) {
+	logger.Fatal(args...)
 }
